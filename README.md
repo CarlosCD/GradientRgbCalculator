@@ -5,7 +5,7 @@ Short Ruby program to calculate RGB codes between two different colors (gradient
 Example of usage: 8 color codes in a gradient between green and orange (weird choice, I know):
 
     ruby -v
-      ruby 3.0.0p0 (2020-12-25 revision 95aff21468) [x86_64-darwin20]
+      ruby 3.2.0 (2022-12-25 revision a528908271) [x86_64-darwin21]
     irb
       load 'gradient_rgb_calculator.rb'
       green = 0x77DD77

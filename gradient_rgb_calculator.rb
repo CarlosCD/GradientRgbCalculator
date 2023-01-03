@@ -1,4 +1,4 @@
-#!/usr/bin/env -S ruby --enable=jit
+# frozen_string_literal: true
 
 class GradientRgbCalculator
   class << self
