@@ -21,20 +21,21 @@ class GradientRgbCalculator
 
     private
 
-    # Convert a hex string to an RGB triplet (Integers)
+    # Separates a number color code in a RGB triplet (Array of 3 Integers)
     def number_to_rgb(rgb_number)
       hex = rgb_number.to_s(16)  # Hex String
       if hex.size > 6
-        raise "rgb_number too large"
+        raise 'rgb_number too large'
       elsif hex.size < 6
         hex = '0'*(6-hex.size) + hex
       end
       hex.scan(/.{2}/).collect{|s| s.to_i(16)}
     end
 
+    # Converts an Array of 3 RBG Integers to their Hex String representation
     def rgb_ary_to_number(rgb_ary)
       if !rgb_ary.is_a?(Array)
-        raise "rgb_ary should be an Array of 3 numbers"
+        raise 'rgb_ary should be an Array of 3 numbers'
       else
         num_arrays = rgb_ary.select{|n| n.to_i == n}
         if rgb_ary.size != 3
